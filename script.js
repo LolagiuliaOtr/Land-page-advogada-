@@ -21,27 +21,13 @@ document.querySelectorAll('#nav-menu a').forEach(function (link) {
 
 // FAQ
 
-document.querySelectorAll('.faq-header').forEach(function (button) {
+document.querySelectorAll('.faq-header').forEach(function(button){
 
-button.addEventListener('click', function () {
+button.addEventListener('click', function(){
 
     const item = button.parentElement;
-    const content = item.querySelector('.faq-content');
-
-    document.querySelectorAll('.faq-item').forEach(function (faq) {
-        if (faq !== item) {
-            faq.classList.remove('active');
-            faq.querySelector('.faq-content').style.maxHeight = null;
-        }
-    });
 
     item.classList.toggle('active');
-
-    if (item.classList.contains('active')) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-    } else {
-        content.style.maxHeight = null;
-    }
 
 });
 
